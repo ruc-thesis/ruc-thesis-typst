@@ -1,48 +1,81 @@
-# RUC Undergraduate Thesis Typst Template
+# 中国人民大学本科生毕业论文 Typst 模板
 
-中国人民大学本科生毕业论文 Typst 模板。
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Typst](https://img.shields.io/badge/built%20with-Typst-239dad.svg)
 
-## 项目结构
+这是一个非官方的中国人民大学（RUC）本科生毕业论文 Typst 模板。旨在帮助同学们用现代化的工具，高效、优雅地完成论文排版。
 
-```
-ruc-thesis-typst/
-├── typst.toml              # [核心] 包配置文件
-├── lib.typ                 # [核心] 模板入口文件
-├── LICENSE                 # 开源协议
-├── README.md               # 项目说明文档
-├── requirements.md         # 排版要求文档
-├── assets/                 # [资源] 存放模板必须的静态资源
-│   └── ruc-logo-header.png # 页眉用的学校Logo
-├── src/                    # [源码] 模板的具体实现逻辑
-│   ├── fonts.typ           # 字体定义
-│   ├── sizes.typ           # 字号常量
-│   ├── cover.typ           # 封面
-│   ├── abstract.typ        # 摘要
-│   ├── declaration.typ     # 声明
-│   ├── outline.typ         # 目录
-│   └── utils.typ           # 辅助函数
-└── template/               # [示例] 用户写作目录
-    ├── main.typ            # 主入口
-    ├── refs.bib            # 参考文献
-    ├── assets/             # 用户图片
-    └── chapters/           # 章节内容
+## ✨ 特性
+
+- **开箱即用**：预置了符合学校要求的页边距、字体、行距等格式。
+- **自动化**：自动生成目录、图表索引，自动处理参考文献引用。
+- **模块化**：章节分离，结构清晰，易于维护。
+
+## 📦 安装与使用
+
+### 方式一：使用官方包（开发中 🚧）
+
+目前本模板尚未发布到 Typst 官方仓库（Universe）。待发布后，你将可以直接通过以下命令初始化项目：
+
+```bash
+typst init @preview/ruc-thesis-typst:0.1.0
 ```
 
-## 使用方法
+### 方式二：安装为本地包（推荐）
 
-1. 复制 `template` 目录下的所有文件到你的项目根目录。
-2. 修改 `main.typ` 中的元数据（标题、作者等）。
-3. 在 `chapters/` 目录下编写你的论文章节。
-4. 使用 `typst compile main.typ` 编译生成 PDF。
+如果你希望在不同的项目中复用此模板，或者离线使用，可以将本仓库安装为 **本地包**。
 
-## 字体要求
+#### 1. 下载并放置到指定目录
 
-请确保系统安装了以下字体：
-- 宋体 (SimSun)
-- 黑体 (SimHei)
-- 楷体 (KaiTi)
-- Times New Roman
+你需要将本仓库克隆到 Typst 的本地包目录中。目录路径如下：
 
-## 贡献
+- **Windows**: `%APPDATA%\typst\packages\local\ruc-thesis-typst\0.1.0`
+- **macOS**: `~/Library/Application Support/typst/packages/local/ruc-thesis-typst/0.1.0`
+- **Linux**: `~/.local/share/typst/packages/local/ruc-thesis-typst/0.1.0`
 
-欢迎提交 Issue 和 Pull Request。
+以 Windows 为例，在 PowerShell 中执行：
+
+```powershell
+# 创建目录
+mkdir "$env:APPDATA\typst\packages\local\ruc-thesis-typst\0.1.0"
+
+# 克隆仓库到该目录
+git clone https://github.com/ruc-thesis/ruc-thesis-typst.git "$env:APPDATA\typst\packages\local\ruc-thesis-typst\0.1.0"
+```
+
+#### 2. 初始化项目
+
+安装完成后，你就可以在任何地方使用 `typst init` 命令来创建基于本模板的新项目了：
+
+```bash
+typst init @local/ruc-thesis-typst:0.1.0 my-thesis
+```
+
+### 方式三：直接克隆（最简单）
+
+如果你不想折腾环境变量，也可以直接克隆本仓库，然后在 `template` 目录中开始写作。
+
+1.  克隆仓库：
+    ```bash
+    git clone https://github.com/ruc-thesis/ruc-thesis-typst.git
+    ```
+2.  进入 `template` 目录，修改 `main.typ` 开始写作。
+3.  编译：
+    ```bash
+    typst compile main.typ
+    ```
+
+## 📝 字体要求
+
+- **宋体** (SimSun)
+- **黑体** (SimHei)
+- **楷体** (KaiTi)
+- **Times New Roman**
+
+## 🛠️ 开发者
+
+如果你是开发者，或者想为本项目贡献代码，请阅读 [开发者指南](docs/DEV.md)。
+
+## 📄 许可证
+
+本项目基于 [MIT 许可证](LICENSE) 开源。
