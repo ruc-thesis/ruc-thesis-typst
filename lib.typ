@@ -3,6 +3,7 @@
 #import "src/abstract.typ": abstract
 #import "src/body.typ": body-style
 #import "src/cover.typ": cover
+#import "src/declaration.typ": declaration
 #import "src/header.typ": header
 #import "src/outline.typ": outline-page
 
@@ -47,6 +48,7 @@
     date: date,
     encoding: encoding,
   )
+  declaration()
   abstract(
     abstract-zh: abstract-zh,
     keywords-zh: keywords-zh,
