@@ -10,8 +10,5 @@
 // 楷体 (强调/引用)
 #let kaiti = ("Times New Roman", "KaiTi", "STKaiti", "Kaiti SC")
 
-// 仿宋 (公文/表格)
-#let fangsong = ("Times New Roman", "FangSong", "STFangsong", "FangSong SC")
-
 // 等宽字体 (代码)
 #let code = ("Consolas", "SimSun", "Menlo", "Monaco")

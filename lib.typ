@@ -24,7 +24,7 @@
   set page(
     paper: "a4",
     margin: (
-      top: 2cm + 0.98cm,
+      top: 2cm + 0.98cm, // 图片 0.98cm
       bottom: 2cm,
       left: 1.5cm + 0.5cm, // 装订线 0.5cm
       right: 1.5cm,
@@ -99,8 +99,22 @@
     it
   }
 
-
   show figure.where(kind: table): set figure.caption(position: top)
   set table(inset: (y: 0.5em))
+
+  set math.equation(numbering: "(1)")
+  show math.equation.where(block: true): set block(breakable: true)
+  show math.equation.where(block: true): it => {
+    if not it.has("label") [
+      #counter(math.equation).update(v => v - 1)
+      #math.equation(it.body, block: true, numbering: none)#label("_")
+    ] else if it.numbering != none {
+      set align(left)
+      it
+    } else {
+      it
+    }
+  }
+
   body
 }
