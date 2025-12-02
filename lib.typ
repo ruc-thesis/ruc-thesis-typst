@@ -1,4 +1,5 @@
 #import "@preview/pointless-size:0.1.2": zh
+#import "@preview/cuti:0.4.0": show-cn-fakebold
 
 #import "src/fonts.typ": *
 
@@ -10,60 +11,61 @@
   keywords: (),
   body,
 ) = {
+  show: show-cn-fakebold
+
+  set par(
+    leading: 1.02em,
+    spacing: 1.02em,
+    first-line-indent: (amount: 2em, all: true),
+    justify: true,
+  )
+
   set page(
     paper: "a4",
     margin: (
-      top: 2cm,
+      top: 2cm + 0.98cm,
       bottom: 2cm,
-      left: 2cm,
+      left: 1.5cm + 0.5cm, // 装订线 0.5cm
       right: 1.5cm,
     ),
-    header: align(center)[
-      #image("assets/ruc-logo-header-gray.svg", height: 0.98cm)
-    ],
+    header: {
+      set align(center)
+      image("assets/ruc-logo-header-gray.svg", height: 0.98cm, width: 4.13cm)
+      v(-0.5em)
+      line(length: 100%, stroke: 1pt + black)
+    },
+    header-ascent: 1.2em,
     footer: context {
       let page_num = counter(page).at(here()).first()
-      align(center, text(font: songti, size: zh(5))[第 #page_num 页])
+      set align(center)
+      set text(font: songti, size: zh(5))
+      [第 #page_num 页]
     },
   )
+
   set text(
     font: songti,
     size: zh(4.5),
     lang: "zh",
     region: "cn",
   )
-  set par(
-    leading: 1.05em,
-    spacing: 1.25em,
-    first-line-indent: (amount: 2em, all: true),
-    justify: true,
-  )
 
   set heading(numbering: "1.1")
-  show heading.where(level: 1): it => {
-    set align(center)
-    set text(font: heiti, size: zh(3), weight: "bold")
-    set par(leading: 1em, first-line-indent: 0pt)
-    v(1em)
-    it
-    v(1em)
-  }
-  show heading.where(level: 2): it => {
-    set align(left)
-    set text(font: heiti, size: zh(4), weight: "bold")
-    set par(leading: 1em, first-line-indent: 0pt)
-    v(1em)
-    it
-    v(1em)
-  }
-  show heading.where(level: 3): it => {
-    set align(left)
-    set text(font: heiti, size: zh(4.5), weight: "bold")
-    set par(leading: 1em, first-line-indent: 0pt)
-    v(1em)
-    it
-    v(1em)
-  }
+  show heading: set block(above: 1.7em, below: 1.7em)
+  show heading: set text(font: heiti)
+  show heading: it => block({
+    if it.numbering != none {
+      counter(heading).display(it.numbering)
+      h(1em)
+    }
+    it.body
+  })
+  show heading.where(level: 1): set align(center)
+  show heading.where(level: 1): set text(size: zh(3))
+  show heading.where(level: 2): set text(size: zh(4))
+  show heading.where(level: 3): set text(size: zh(4.5))
+  show heading.where(level: 4): set text(size: zh(5))
+  show heading.where(level: 5): set text(size: zh(5))
 
   body
 }
