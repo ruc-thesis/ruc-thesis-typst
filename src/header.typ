@@ -7,12 +7,12 @@
       left: 1.5cm + 0.5cm, // 装订线 0.5cm
       right: 1.5cm,
     ),
-    header: {
-      set align(center)
-      image(header-path, height: 0.98cm, width: 4.13cm)
-      v(-0.5em)
-      line(length: 100%, stroke: 1pt + black)
-    },
+    header: align(center, block(
+      width: 100%,
+      stroke: (bottom: 1pt + black),
+      inset: (bottom: 4pt),
+      image(header-path, height: 0.98cm, width: 4.13cm),
+    )),
     header-ascent: 1.2em,
   )
 
