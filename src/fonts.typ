@@ -14,4 +14,4 @@
 #let fangsong = ("Times New Roman", "FangSong", "STFangsong", "FangSong SC")
 
 // 等宽字体 (代码)
-#let code = ("Courier New", "SimSun", "Menlo", "Monaco")
+#let code = ("Consolas", "SimSun", "Menlo", "Monaco")

@@ -1,5 +1,5 @@
-#import "@preview/pointless-size:0.1.2": zh
 #import "@preview/cuti:0.4.0": show-cn-fakebold
+#import "@preview/pointless-size:0.1.2": zh
 
 #import "src/fonts.typ": *
 #import "src/utils.typ": three-line-table
@@ -49,6 +49,15 @@
     size: zh(4.5),
     lang: "zh",
     region: "cn",
+  )
+  show emph: set text(font: kaiti)
+  show raw: set text(font: code, size: zh(5))
+  show raw.where(block: true): set block(
+    width: 100%,
+    fill: luma(245),
+    inset: 10pt,
+    radius: 4pt,
+    stroke: luma(200) + 0.5pt,
   )
 
   set heading(numbering: "1.1")
