@@ -12,12 +12,18 @@
   score: "90分",
   date: "2026年3月10日",
   encoding: "RUC-BK-050101-2021000000",
-  abstract: [
-    这是中文摘要。本文旨在测试Typst模板的各种样式和功能。
+  abstract-zh: [
+    这里是中文摘要。在对论文进行总结的基础上，用简单、明确、易懂、精辟的语言对全文内容加以概括，提取论文的主要信息。
 
     摘要通常包含研究背景、目的、方法、结果和结论。
   ],
-  keywords: ("关键词1", "关键词2", "Typst", "模板"),
+  keywords-zh: ("关键词1", "关键词2", "关键词3"),
+  abstract-en: [
+    This is abstract. Use simple, clear, understandable, incisive language to summarize the full text content, extract the main information of the paper.
+
+    The abstract usually contains the research background, purpose, methods, results, and conclusions.
+  ],
+  keywords-en: ("Keyword1", "Keyword2", "Keyword3"),
 )
 
 #include "chapters/chapter1.typ"

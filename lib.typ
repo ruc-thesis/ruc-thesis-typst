@@ -5,6 +5,8 @@
 #import "src/header.typ": header
 
 
+#import "src/abstract.typ": abstract
+
 #let project(
   title: "",
   subtitle: "",
@@ -17,16 +19,22 @@
   score: "",
   date: "",
   encoding: "",
-  abstract: [],
-  keywords: (),
+  abstract-zh: [],
+  keywords-zh: (),
+  abstract-en: [],
+  keywords-en: (),
   body,
 ) = {
   show: show-cn-fakebold
-
   show: header("/assets/ruc-logo-header-gray.svg")
 
+  set par(
+    first-line-indent: (amount: 2em, all: true),
+    justify: true,
+  )
+
   cover(
-    title:  title,
+    title: title,
     subtitle: subtitle,
     author: author,
     school: school,
@@ -37,6 +45,12 @@
     score: score,
     date: date,
     encoding: encoding,
+  )
+  abstract(
+    abstract-zh: abstract-zh,
+    keywords-zh: keywords-zh,
+    abstract-en: abstract-en,
+    keywords-en: keywords-en,
   )
   body-style(body)
 }
