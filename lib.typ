@@ -3,7 +3,6 @@
 #import "src/abstract.typ": abstract
 #import "src/acknownlege.typ": acknowledgement-page
 #import "src/appendix.typ": appendix-page
-#import "src/bibliography.typ": bibliography-page
 #import "src/body.typ": body-style
 #import "src/cover.typ": cover
 #import "src/declaration.typ": declaration
@@ -30,7 +29,7 @@
   keywords-en: (),
   acknowledgement: none,
   appendix: none,
-  bibliography-file: none,
+  bibliography: none,
   body,
 ) = {
   show: show-cn-fakebold
@@ -69,8 +68,9 @@
   body
   signature()
 
-  if bibliography-file != none {
-    bibliography-page(bibliography-file)
+  if bibliography != none {
+    bibliography
+    pagebreak()
   }
   if appendix != none {
     appendix-page(appendix)

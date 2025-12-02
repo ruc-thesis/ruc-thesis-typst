@@ -27,7 +27,7 @@
   keywords-en: ("Keyword1", "Keyword2", "Keyword3"),
   acknowledgement: include "acknowledgement.typ",
   appendix: include "appendix.typ",
-  bibliography-file: "/template/refs.bib",
+  bibliography: bibliography("refs.bib", title: [参考文献], style: "gb-7714-2015-numeric"),
 )
 
 #include "chapters/chapter1.typ"
