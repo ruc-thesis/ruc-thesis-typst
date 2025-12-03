@@ -19,12 +19,18 @@ ruc-thesis-typst/
 │   └── ruc-logo-header.png # 页眉用的学校Logo
 ├── src/                    # [源码] 模板的具体实现逻辑
 │   ├── fonts.typ           # 字体定义
-│   ├── sizes.typ           # 字号常量
-│   ├── cover.typ           # 封面
-│   ├── abstract.typ        # 摘要
-│   ├── declaration.typ     # 声明
-│   ├── outline.typ         # 目录
-│   └── utils.typ           # 辅助函数
+│   ├── utils.typ           # 辅助函数
+│   ├── pages/              # [页面] 各个功能页面的实现
+│   │   ├── abstract.typ    # 摘要
+│   │   ├── acknownledge.typ # 致谢
+│   │   ├── appendix.typ    # 附录
+│   │   ├── cover.typ       # 封面
+│   │   ├── declaration.typ # 声明
+│   │   ├── outline.typ     # 目录
+│   │   └── signature.typ   # 签名页
+│   └── styles/             # [样式] 通用样式定义
+│       ├── body.typ        # 正文样式
+│       └── header.typ      # 页眉样式
 └── template/               # [示例] 用户写作目录
     ├── main.typ            # 主入口
     ├── refs.bib            # 参考文献
