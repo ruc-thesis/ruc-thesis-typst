@@ -5,7 +5,6 @@
 #import "/src/utils.typ": three-line-table
 
 
-
 #let body-style(body) = {
   show table: three-line-table
 
