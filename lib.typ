@@ -4,9 +4,9 @@
 #import "src/pages/acknownledge.typ": acknowledgement-page
 #import "src/pages/appendix.typ": appendix-page
 #import "src/pages/cover.typ": cover
-#import "src/pages/declaration.typ": declaration
+#import "src/pages/declaration.typ": declaration-page
 #import "src/pages/outline.typ": outline-page
-#import "src/pages/signature.typ": signature
+#import "src/pages/signature.typ": add-signature
 #import "src/styles/body.typ": body-style
 #import "src/styles/header.typ": header
 
@@ -30,6 +30,8 @@
   acknowledgement: none,
   appendix: none,
   bibliography: none,
+  declaration: auto,
+  signature: auto,
   body,
 ) = {
   show: show-cn-fakebold
@@ -54,7 +56,9 @@
     date: date,
     encoding: encoding,
   )
-  declaration()
+  if declaration == auto {
+    declaration-page()
+  }
   abstract(
     abstract-zh: abstract-zh,
     keywords-zh: keywords-zh,
@@ -66,7 +70,10 @@
   show: body-style
 
   body
-  signature()
+  if signature == auto {
+    add-signature()
+  }
+  pagebreak()
 
   if bibliography != none {
     bibliography

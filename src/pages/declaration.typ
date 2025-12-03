@@ -3,7 +3,7 @@
 #import "/src/fonts.typ": *
 
 
-#let declaration() = {
+#let declaration-page() = {
   set text(font: songti, size: zh(4.5))
   set par(leading: 1.25em)
 
