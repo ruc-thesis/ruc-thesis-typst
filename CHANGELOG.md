@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/ruc-thesis/modern-ruc-thesis/compare/v0.1.0...v0.1.1) (2025-12-05)
+
+
+### Features
+
+* **bib:** add bib style ([48f2dfc](https://github.com/ruc-thesis/modern-ruc-thesis/commit/48f2dfc0d63b0d27e2f687539626dd0b4b13e99a))
+
+
+### Bug Fixes
+
+* **logos:** fix missing file issues ([a7e899b](https://github.com/ruc-thesis/modern-ruc-thesis/commit/a7e899b857456e5855a90699aa499c9c6e4473e5))
+
 ## 0.1.0 (2025-12-03)
 
 
