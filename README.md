@@ -23,7 +23,7 @@ This is an unofficial undergraduate thesis Typst template for Renmin University 
    - 安装后，打开 `.typ` 文件即可自动激活，点击右上角的 "Preview" 按钮即可查看实时预览。
 3. 你可以通过下面 3 种方式来获取模板：
    - **Typst Cli**：
-     - 先从官方 [Typst](https://github.com/typst/typst) 下载并安装 Typst CLI
+     - 先从官方 [Typst](https://typst.app/open-source/#download) 下载并安装 Typst CLI
      - 然后在命令行输入：
        ```bash
        typst init @preview/modern-ruc-thesis
