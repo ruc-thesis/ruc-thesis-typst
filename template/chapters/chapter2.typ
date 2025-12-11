@@ -29,7 +29,7 @@
 - 行内公式：$E = m c^2$。
 - 行间公式：
   $
-    f(x) = 1 / sigma sqrt(2 pi) e^(- (x - mu)^2 / (2 sigma^2))
+    f(x) = 1 / (sigma sqrt(2 pi)) e^(- (x - mu)^2 / (2 sigma^2))
   $
 - 带编号的行间公式（会顶格）：
   $
