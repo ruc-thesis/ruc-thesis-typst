@@ -1,5 +1,7 @@
 # 中国人民大学本科生毕业论文 Typst 模板
 
+[![Typst Package](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fruc-thesis%2Fmodern-ruc-thesis%2Fmaster%2Ftypst.toml&query=%24.package.version&prefix=v&logo=typst&label=package&color=239dad)](https://typst.app/universe/package/modern-ruc-thesis)
+![GitHub Repo stars](https://img.shields.io/github/stars/ruc-thesis/modern-ruc-thesis?style=flat&logo=github)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Typst](https://img.shields.io/badge/built%20with-Typst-239dad.svg)
 
