@@ -90,8 +90,5 @@
   set footnote(numbering: "①")
   show footnote.entry: set text(font: songti, size: zh(5.5))
 
-  // 当标题在一页的开始时，word和typst都会去掉标题上方的space
-  // 但是word不会去掉第一页的space，所以这里加上
-  v(0.8em)
   body
 }

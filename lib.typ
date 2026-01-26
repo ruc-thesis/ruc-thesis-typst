@@ -30,8 +30,8 @@
   acknowledgement: none,
   appendix: none,
   bibliography: none,
-  declaration: auto,
-  signature: auto,
+  declaration: true,
+  signature: true,
   body,
 ) = {
   show: show-cn-fakebold
@@ -56,7 +56,7 @@
     date: date,
     encoding: encoding,
   )
-  if declaration == auto {
+  if declaration {
     declaration-page()
   }
   abstract(
@@ -70,7 +70,7 @@
   show: body-style
 
   body
-  if signature == auto {
+  if signature {
     add-signature()
   }
   pagebreak()
